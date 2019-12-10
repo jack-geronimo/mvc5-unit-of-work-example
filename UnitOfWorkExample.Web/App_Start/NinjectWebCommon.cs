@@ -1,3 +1,5 @@
+using Ninject.Web.Common.WebHost;
+
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(UnitOfWorkExample.Web.App_Start.NinjectWebCommon), "Start")]
 [assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(UnitOfWorkExample.Web.App_Start.NinjectWebCommon), "Stop")]
 

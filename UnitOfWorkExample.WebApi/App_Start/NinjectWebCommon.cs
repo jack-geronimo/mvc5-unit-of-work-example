@@ -1,4 +1,7 @@
-﻿[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(UnitOfWorkExample.WebApi.App_Start.NinjectWebCommon), "Start")]
+﻿using Ninject.Web.Common.WebHost;
+using UnitOfWorkExample.Data.Helpers;
+
+[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(UnitOfWorkExample.WebApi.App_Start.NinjectWebCommon), "Start")]
 [assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(UnitOfWorkExample.WebApi.App_Start.NinjectWebCommon), "Stop")]
 
 namespace UnitOfWorkExample.WebApi.App_Start
@@ -13,7 +16,7 @@ namespace UnitOfWorkExample.WebApi.App_Start
     using Ninject.Extensions.Conventions;
     using System.Web.Http;
     using UnitOfWorkExample.Domain.Helpers;
-    using UnitOfWorkExample.Data.Helpers;
+
 
     public static class NinjectWebCommon
     {
